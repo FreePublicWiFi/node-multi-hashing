@@ -46,7 +46,7 @@ static void getAlgoString(const uint8_t* prevblock, char *output)
 {
 	char *sptr = output;
 	int j;
-	int sumOfSeven
+	int sumOfSeven;
 	for (j = 0; j < HASH_FUNC_COUNT - 1; j++) {
 		char b = (7 - j) >> 1; // 16 ascii hex chars, reversed
 		uint8_t algoDigit = (j & 1) ? prevblock[b] & 0xF : prevblock[b] >> 4;
